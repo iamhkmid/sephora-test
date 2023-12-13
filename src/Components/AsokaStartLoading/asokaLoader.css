@@ -1,0 +1,43 @@
+.DialogOverlay {
+  position: fixed;
+  background: radial-gradient(116.6% 114.91% at 91.03% 11.63%, #3B4874 0%, #2D3553 100%);
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
